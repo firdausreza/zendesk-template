@@ -1,25 +1,22 @@
 import { defineConfig } from "vite";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
 	build: {
+		outDir: "./",
 		rollupOptions: {
 			input: {
 				main: "./assets/scripts/main.js",
 			},
 			output: {
 				entryFileNames: "script.js",
-				assetFileNames: (assetInfo) => {
-					const fileName = assetInfo.name || assetInfo.names[0];
-					if (fileName === "style.css") {
-						return "style.css";
-					} else {
-						return "assets/[name].[hash][extname]";
-					}
-				},
 			},
 		},
 	},
 	css: {
-		postcss: "./postcss.config.js",
+		postcss: {
+			plugins: "./postcss.config.js",
+		},
 	},
 });
