@@ -1,0 +1,28 @@
+{
+	"name": "Zendesk Custom Theme Template",
+	"author": "Reza Firdaus",
+	"version": "1.0.0",
+	"api_version": "2.0",
+	"default_locale": "en",
+	"license": "MIT",
+	"location": "https://your-theme-hosting-url.com",
+	"settings": [
+		{
+			"label": "Brand",
+			"variables": [
+				{
+					"identifier": "brand_name",
+					"type": "text",
+					"description": "Enter the Brand Name",
+					"label": "Brand Name"
+				},
+				{
+					"identifier": "brand_logo",
+					"type": "file",
+					"description": "Enter the Brand Logo",
+					"label": "Brand Logo"
+				}
+			]
+		}
+	]
+}
